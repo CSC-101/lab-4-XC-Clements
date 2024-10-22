@@ -1,7 +1,8 @@
 import data
 import lab4
 import unittest
-
+from lab4 import first_element, x_coordinates
+from data import Point
 
 # Write your test cases for each part below.
 
@@ -15,10 +16,15 @@ class TestCases(unittest.TestCase):
 
 
     def test_first_element_2(self):
-        # write a second test here
-
+        big_list = [[1, 12, 17], [4, 16], [1], [], [8, 9, 10]]
+        self.assertEqual(first_element(big_list), [1, 4, 1, 8])
 
     # Part 2
+    def x_coordinates_test(self):
+        big_point_list = [Point(4, 2),
+                          Point(7, 12),
+                          Point(9, 10)]
+        self.assertEqual(x_coordinates(big_point_list), [4, 7, 9])
 
 
     # Part 3
